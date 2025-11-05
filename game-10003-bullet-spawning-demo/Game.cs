@@ -30,6 +30,12 @@ namespace MohawkGame2D
                 // skip the bullet if it hasn't been spawned yet
             }
 
+            // if ammo is gone, right click will give me more
+            if (Input.IsMouseButtonPressed (MouseInput.Right))
+            {
+                bullets = new Bullet[100];
+            }
+
             Text.Draw($"Ammo: {ammo}", new Vector2(10, 10));
 
         }
